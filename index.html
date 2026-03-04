@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Curriculo</title>
-        <link href="/css/style.css" rel="stylesheet">
-    </head>
 
-    <body>
-        <header>
-            <nav>
-                <div class="logo">DIEGO</div>
-                <div class="nav-links">
-                  <a href="#about">Sobre</a>
-                  <a href="#projects">Projetos</a>
-                  <a href="#skills">Habilidades</a>
+<head>
+    <title>Curriculo</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Diego Matheus</div>
+            <div class="nav-links">
+                <a href="#about">Sobre</a>
+                <a href="#projects">Projetos</a>
+                <a href="#skills">Habilidades</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="profile-wrapper">
+                        <img src="assets/img/profile-photo.jpeg" alt="Diego Matheus" class="profile-image">
+                    </div>
+                    
+                    <div class="about-text">
+                        <h2>Sobre Mim</h2>
+                        <p>Sou estudante de Engenharia de Software no IFPR e atuo como estagiário na Unimake. Foco em lógica backend e sistemas Linux.</p>
+                        <p>Minha abordagem é analítica: foco em mecanismos e resolução de problemas fundamentais.</p>
+                        <a href="#contact" class="btn-primary">Entrar em contato</a>
+                    </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </section>
 
-        <main>
-            <section id="about">
-                <h1>Sobre</h1>
-            </section>
+        <section id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projetos Selecionados</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Sicape</h3>
+                        <p>Sistema de gestão interna focado em performance.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </article>
 
-            <section id="projects">
-                <h1>Projetos</h1>
-            </section>
+                    <article class="project-card">
+                        <h3>Exemplo 2</h3>
+                        <p>descricao</p>
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>Spring</span>
+                        </div>
+                    </article>
 
-            <section id="skills">
-                <h1>Habilidades</h1>
-            </section>
+                    <article class="project-card">
+                        <h3>Exemplo 3</h3>
+                        <p>descricao.</p>
+                        <div class="tech-stack">
+                            <span>Bash</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
-            <section id="contact">
-                <h1>Contate-me</h1>
-            </section>
-        </main>
+    <footer>
+        <p>© 2026 Diego Matheus - Engenharia de Software</p>
+    </footer>
+</body>
 
-        <footer>Rodapé</footer>
-    </body>
 </html>
