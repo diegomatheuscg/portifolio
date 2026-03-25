@@ -1,0 +1,53 @@
+[
+  {
+    "id": "sicape",
+    "title": "SICAPE - Gestão de Penas Alternativas",
+    "description": "Solução projetada para comarcas e fóruns visando mitigar fraudes...",
+    "imgUrl": "./assets/img/sicape-preview.png",
+    "techStack": [
+      "JavaScript",
+      "Alpine.js",
+      "Scrum",
+      "Java"
+    ],
+    "repoUrl": "https://github.com/...",
+    "btnText": "Ver Repositório"
+  },
+  {
+    "id": "cache-sim",
+    "title": "Simulador de Memória Cache",
+    "description": "Projeto focado em arquitetura de computadores e programação de baixo nível...",
+    "imgUrl": "./assets/img/simulador-cache-preview.png",
+    "techStack": [
+      "C++",
+      "Arquitetura HW"
+    ],
+    "repoUrl": "#",
+    "btnText": "Ver mais"
+  },
+  {
+    "id": "jogo-da-memoria",
+    "title": "Jogo da Memória",
+    "description": "Implementação do jogo da memória com lógica client-side",
+    "imgUrl" : "./assets/img/jogo-memoria-preview.png",
+    "techStack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "repoUrl": "#",
+    "btnText": "Ver mais"
+  }, {
+    "id": "jogo-da-memoria",
+    "title": "Jogo da Memória",
+    "description": "Implementação do jogo da memória com lógica client-side",
+    "imgUrl" : "./assets/img/jogo-memoria-preview.png",
+    "techStack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "repoUrl": "#",
+    "btnText": "Ver mais"
+  }
+]
