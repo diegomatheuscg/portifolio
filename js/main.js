@@ -22,21 +22,22 @@ function cadastrarProjeto(project) {
     const techStackSpans = (project.techStack || []).
         map(tech => `<span>${tech}</span>`).join('');
 
-    cardProject.innerHTML = `<div class="project-content">
-                            <h3>${project.title}</h3>
-                            <p>${project.description}</p>
-                            <div class="project-image-wrapper">
-                            <img class="project-image" src="${project.imgUrl}">
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <div class="tech-stack">
-                                ${techStackSpans}
-                            </div>
-                            <div class="btn-wrapper">
-                            <a href="#" class="btn-sm">Ver mais</a>
-                            </div>
-                        </div>`
+    cardProject.innerHTML = `
+        <div class="project-image-wrapper">
+            <img class="project-image" src="${project.imgUrl}" alt="${project.title}">
+        </div>
+        <div class="project-content">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+        </div>
+        <div class="project-footer">
+            <div class="tech-stack">
+                ${techStackSpans}
+            </div>
+            <div class="btn-wrapper">
+                <a href="${project.repoUrl || '#'}" class="btn-sm" target="_blank">${project.btnText || 'Ver mais'}</a>
+            </div>
+        </div>`;
 
     projectGrid.appendChild(cardProject);
 }
@@ -44,7 +45,7 @@ function cadastrarProjeto(project) {
 async function fetchProjectsData() {
     try {
         const response = await fetch('./assets/json/projects.json');
-        if (!response) {
+        if (!response.ok) {
             throw new Error(`Erro HTTP: ${response.status}`);
         }
         const data = await response.json();

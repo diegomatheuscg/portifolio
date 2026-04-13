@@ -37,17 +37,5 @@
     ],
     "repoUrl": "#",
     "btnText": "Ver mais"
-  }, {
-    "id": "jogo-da-memoria",
-    "title": "Jogo da Memória",
-    "description": "Implementação do jogo da memória com lógica client-side",
-    "imgUrl" : "./assets/img/jogo-memoria-preview.png",
-    "techStack": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
-    "repoUrl": "#",
-    "btnText": "Ver mais"
   }
 ]

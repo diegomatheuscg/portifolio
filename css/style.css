@@ -180,8 +180,32 @@ nav .nav-links a:hover {
     filter: grayscale(20%);
 }
 
+.hero-greeting {
+    color: var(--accent);
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
 .hero-title {
-    letter-spacing: -1px;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+}
+
+.hero-title span {
+    color: var(--accent);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 30px;
 }
 
 .hero-pillars {
@@ -202,6 +226,20 @@ nav .nav-links a:hover {
     height: 12px;
     left: -27px;
     display: block;
+}
+
+.pillar-title {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-family: 'Fira Code', monospace;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.pillar-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .about-content {
@@ -322,14 +360,14 @@ nav .nav-links a:hover {
     width: 100%;
     height: 180px;
     flex-shrink: 0;
-    margin: 15px 0;
+    margin: 0 0 15px 0;
     overflow: hidden;
     border-radius: 4px;
 }
 .project-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
+    object-fit: cover; 
     object-position: center center; 
     display: block;
 }
@@ -339,13 +377,13 @@ nav .nav-links a:hover {
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     gap: 15px;
 }
 
 .btn-wrapper{
     display:flex;
-    align-items:flex-end;
+    align-items:center;
 }
 
 .project-footer .tech-stack {
@@ -359,6 +397,7 @@ nav .nav-links a:hover {
 }
 
 .tech-stack span {
+    font-family: 'Fira Code', monospace;
     background-color: var(--span-bg);
     border-radius: 4px;
     padding: 6px 12px; 
