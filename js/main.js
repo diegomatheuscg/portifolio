@@ -35,7 +35,7 @@ function cadastrarProjeto(project) {
                 ${techStackSpans}
             </div>
             <div class="btn-wrapper">
-                <a href="${project.repoUrl || '#'}" class="btn-sm" target="_blank">${project.btnText || 'Ver mais'}</a>
+                <a href="${project.repoUrl || '#'}" class="btn-sm" target="_blank">Ver repositório</a>
             </div>
         </div>`;
 
