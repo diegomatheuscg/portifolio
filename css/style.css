@@ -137,23 +137,6 @@ nav .nav-links a:hover {
     box-shadow: 0 4px 20px rgba(57, 255, 20, 0.2);
 }
 
-.btn-sm {
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 8px 16px;
-    color: var(--bg-color);
-    background-color: var(--accent);
-    border-radius: 4px;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-}
-
-.btn-sm:hover {
-    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
-    background-color: #32e012;
-}
-
 .hero-section {
     padding: 80px 0 40px 0;
 }
@@ -340,15 +323,13 @@ nav .nav-links a:hover {
     padding: 24px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-left: 3px solid var(--accent);
     display: flex;
     flex-direction: column;
-    transition: transform 0.1s ease, border-color 0.2s ease;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
+    box-shadow: 0px 0px 24px -18px var(--accent);
 }
 
 .project-content {
@@ -390,7 +371,7 @@ nav .nav-links a:hover {
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     gap: 15px;
 }
 
@@ -411,26 +392,36 @@ nav .nav-links a:hover {
 
 .tech-stack span {
     font-family: 'Fira Code', monospace;
-    background-color: var(--span-bg);
+    border: 1px solid var(--span-bg);
+    color: var(--text-secondary);
     border-radius: 4px;
-    padding: 6px 12px; 
+    padding: 5px 11px;
     font-size: 12px;
     display: flex;
     align-items: center; 
 }
 
 .btn-sm {
+    font-family: 'Fira Code', monospace;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
-    padding: 6px 16px; 
-    color: var(--bg-color);
-    background-color: var(--accent);
+    padding: 5px 15px;
+    color: var(--accent);
+    background-color: transparent;
+    border: 1px solid var(--accent);
     border-radius: 4px;
     white-space: nowrap;
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center; 
+}
+
+.btn-sm:hover {
+    background-color: var(--accent);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+    transform: translateY(-1px);
 }
 
 .skills-wrapper {
@@ -444,13 +435,12 @@ nav .nav-links a:hover {
     padding: 24px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-left: 3px solid var(--accent);
-    transition: transform 0.1s ease, border-color 0.2s ease;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
 }
 
 .skill-category:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
+    transform: translateY(-5px);    
+    box-shadow: 0px 0px 24px -18px var(--accent);
 }
 
 .skill-category h3 {
