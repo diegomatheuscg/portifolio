@@ -1,57 +1,105 @@
 const projectGrid = document.querySelector(".projects-grid");
+const experienceList = document.querySelector("#experience .timeline");
+const repoSpan = document.getElementById("repo-count");
 
-projectGrid.innerHTML = "";
+document.addEventListener("DOMContentLoaded", async () => {
 
+    const { projects, experiences, repoCount } = await initData();
 
-let projects = await fetchProjectsData();
-cadastrarTodosProjetos(projects);
+    if (projects) {
+        projectGrid.innerHTML = "";
+        projects.forEach(p => createProject(p));
+    }
+    if (experiences) {
+        experienceList.innerHTML = "";
+        experiences.forEach(e => createExperience(e));
+    }
 
+    repoSpan.textContent = repoCount;
 
-function cadastrarTodosProjetos(projects) {
+});
 
-    projects.forEach((p) => {
-        cadastrarProjeto(p);
-    });
+async function initData() {
+    const [projects, experiences, repoCount] = await Promise.all([
+        fetchProjects(),
+        fetchExperiences(),
+        fetchRepoCount(),
+    ]);
+    return { projects, experiences,repoCount };
 }
 
-function cadastrarProjeto(project) {
+async function fetchRepoCount() {
+    try {
+        const response = await fetch("https://api.github.com/users/diegomatheuscg");
+        if (!response.ok) {
+            throw new Error(`Erro de requisição do GitHub. Status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.public_repos;
+    } catch (e) {
+        console.error("Failed to fetch repo count:", e);
+        return null;
+    }
+}
 
-    const cardProject = document.createElement("article");
-    cardProject.className = "project-card";
+async function fetchProjects() {
+    try {
+        const response = await fetch("./assets/json/projects.json");
+        if (!response.ok) throw new Error(`Erro de requisição dos projetos. Status: ${response.status}`);
+        const data = await response.json();
+        return data;
+    } catch (e) {
+        console.error("Failed to fetch projects:", e);
+        return null;
+    }
+}
 
-    const techStackSpans = (project.techStack || []).
-        map(tech => `<span>${tech}</span>`).join('');
+async function fetchExperiences() {
+    try {
+        const response = await fetch("./assets/json/experience.json");
+        if (!response.ok) throw new Error(`Erro de requisição de experiências. Status: ${response.status}`);
+        const data = await response.json();
+        return data;
+    } catch (e) {
+        console.error("Failed to fetch experiences:", e);
+        return null;
+    }
+}
 
-    cardProject.innerHTML = `
-        <div class="project-image-wrapper">
-            <img class="project-image" src="${project.imgUrl}" alt="${project.title}">
+function createProject(p) {
+    const projectCard = document.createElement("article");
+    projectCard.className = "project-card";
+
+    const techStackSpans = (p.techStack || []).map(techStack => `<span>${techStack}</span>`).join('');
+
+    projectCard.innerHTML =
+        `<div class="project-image-wrapper">
+            <img class="project-image" src="${p.imgUrl}" alt="${p.title}">
         </div>
         <div class="project-content">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
         </div>
         <div class="project-footer">
             <div class="tech-stack">
                 ${techStackSpans}
             </div>
             <div class="btn-wrapper">
-                <a href="${project.repoUrl || '#'}" class="btn-sm" target="_blank">Ver repositório</a>
+                <a href="${p.repoUrl || '#'}" class="btn-sm" target="_blank">${p.btnText || 'Ver mais'}</a>
             </div>
-        </div>`;
-
-    projectGrid.appendChild(cardProject);
+        </div>`
+    projectGrid.appendChild(projectCard);
 }
 
-async function fetchProjectsData() {
-    try {
-        const response = await fetch('./assets/json/projects.json');
-        if (!response.ok) {
-            throw new Error(`Erro HTTP: ${response.status}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Falha ao carregar os projetos da fonte de dados:", error);
-        return [];
-    }
+function createExperience(e) {
+    const timelineItem = document.createElement("div");
+    timelineItem.className = "timeline-item";
+
+    timelineItem.innerHTML = `<div class="timeline-date">${e.timeline_date}</div>
+                        <div class="timeline-content">
+                            <h3>${e.title}</h3>
+                            <h4>${e.company}</h4>
+                            <p>${e.description}</p>
+                        </div>`
+    experienceList.appendChild(timelineItem);
 }
