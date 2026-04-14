@@ -112,38 +112,29 @@ nav .nav-links a:hover {
     letter-spacing: 0px;
 }
 
+
+
+
+
 .btn-primary {
-    display: inline-block;
+    display: inline-flex;
     margin-top: 20px;
+    align-items: center;
+    gap: 8px;
     padding: 12px 28px;
-    color: var(--accent);
+    color: var(--text-primary);
     text-decoration: none;
-    border: 1px solid var(--accent);
+    box-shadow: 0 0 1px var(--span-bg);
     border-radius: 4px;
     font-weight: 600;
     transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--accent);
-    color: var(--bg-color);
-}
-
-.btn-secondary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    color: var(--text-primary);
-    text-decoration: none;
-    border: 1px solid var(--text-primary);
-    border-radius: 4px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.btn-secondary:hover {
     background-color: var(--text-primary);
     color: var(--bg-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(57, 255, 20, 0.2);
 }
 
 .btn-sm {
@@ -217,6 +208,18 @@ nav .nav-links a:hover {
     max-width: 600px;
     margin-bottom: 30px;
 }
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-actions .btn-primary, .hero-actions .btn-secondary {
+    margin-top: 0;
+}
+
 
 .hero-pillars {
     display: flex;
@@ -541,6 +544,16 @@ nav .nav-links a:hover {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+#repo-count {
+    font-family: 'Fira Code', monospace;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+#repo-count::after {
+    content: ' repositórios públicos';
 }
 
 footer {

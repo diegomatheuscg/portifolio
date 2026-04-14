@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         experiences.forEach(e => createExperience(e));
     }
 
-    repoSpan.textContent = repoCount;
+    if (repoCount !== null) {
+        repoSpan.textContent = repoCount;
+    } else {
+        repoSpan.style.display = 'none';
+    }
 
 });
 
