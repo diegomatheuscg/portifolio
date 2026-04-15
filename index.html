@@ -16,12 +16,12 @@
         <nav>
             <div class="logo">Diego Matheus<span>.</span></div>
             <div class="nav-links">
-                <a href="#about">Sobre<span>.</span></a>
-                <a href="#projects">Projetos<span>.</span></a>
-                <a href="#skills">Habilidades<span>.</span></a>
-                <a href="#experience">Experiência<span>.</span></a>
-                <a href="#education">Educação<span>.</span></a>
-                <select id="language-selector" name="languages">
+                <a href="#about" data-i18n="nav.about">Sobre</a>
+                <a href="#projects" data-i18n="nav.projects">Projetos</a>
+                <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+                <a href="#experience" data-i18n="nav.experience">Experiência</a>
+                <a href="#education" data-i18n="nav.education">Educação</a>
+                <select id="language-selector" name="languages" aria-label="Select language">
                     <option value="pt-br">Português</option>
                     <option value="en-us">Inglês</option>
                 </select>
@@ -37,29 +37,21 @@
                 </div>
 
                 <div class="hero-text">
-                    <span class="hero-greeting">Olá, meu nome é Diego Matheus</span>
-                    <h1 class="hero-title">Engenheiro de Software<span>.</span></h1>
+                    <span class="hero-greeting" data-i18n="hero.greeting">Olá, meu nome é Diego Matheus</span>
+                    <h1 class="hero-title" data-i18n="hero.title">Engenheiro de Software</h1>
 
-                    <p class="hero-subtitle">
-                        Graduando em Engenharia de Software e Desenvolvedor Full Stack, com base sólida na resolução de
-                        problemas em ambientes de produção. Atuo no desenvolvimento estruturado de back-end com
-                        <strong>Java</strong> (POO, Design Patterns) e <strong>C/C++</strong>, aliado à criação de
-                        interfaces web e mobile utilizando <strong>JavaScript, React</strong> e
-                        <strong>Flutter</strong>. Possuo ampla experiência em administração de bancos de dados SQL,
-                        integrações via API, análise de logs e investigação técnica de falhas.
-                    </p>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">Graduando em Engenharia de Software e Desenvolvedor Full Stack, com base sólida na resolução de problemas em ambientes de produção. Atuo no desenvolvimento estruturado de back-end com Java (POO, Design Patterns) e C/C++, aliado à criação de interfaces web e mobile utilizando JavaScript, React e Flutter. Possuo ampla experiência em administração de bancos de dados SQL, integrações via API, análise de logs e investigação técnica de falhas.</p>
 
                     <div class="hero-actions">
-                        <a href="#contact" class="btn-primary">Entrar em contato</a>
+                        <a href="#contact" class="btn-primary" data-i18n="hero.cta_contact">Entrar em contato</a>
                         <a href="https://github.com/diegomatheuscg" target="_blank" class="btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
                                 <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V21">
-                                </path>
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V21"></path>
                             </svg>
-                            Acessar GitHub
+                            <span data-i18n="hero.cta_github">Acessar GitHub</span>
                         </a>
                         <span id="repo-count"></span>
                     </div>
@@ -72,7 +64,7 @@
         <section id="projects">
             <div class="container">
                 <div class="section-header">
-                    <h2>Projetos Selecionados</h2>
+                    <h2 data-i18n="sections.projects_title">Projetos Selecionados</h2>
                 </div>
                 <div class="projects-grid">
                     Sem projetos!
@@ -84,7 +76,7 @@
         <section id="skills">
             <div class="container">
                 <div class="section-header">
-                    <h2>Habilidades Técnicas</h2>
+                    <h2 data-i18n="sections.skills_title">Habilidades Técnicas</h2>
                 </div>
                 <div class="skills-wrapper">
 
@@ -125,7 +117,7 @@
         <section id="experience">
             <div class="container">
                 <div class="section-header">
-                    <h2>Experiências Profissionais</h2>
+                    <h2 data-i18n="sections.experience_title">Experiências Profissionais</h2>
                 </div>
 
                 <div class="timeline">
@@ -137,7 +129,7 @@
         <section id="education">
             <div class="container">
                 <div class="section-header">
-                    <h2>Educação</h2>
+                    <h2 data-i18n="sections.education_title">Educação</h2>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -164,14 +156,13 @@
         <section id="contact">
             <div class="container">
                 <div class="section-header">
-                    <h2>Contato</h2>
+                    <h2 data-i18n="sections.contact_title">Contato</h2>
                 </div>
 
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <h3>Vamos conversar</h3>
-                        <p>Sinta-se à vontade para me mandar uma mensagem ou conectar-se através das minhas redes
-                            sociais.</p>
+                        <h3 data-i18n="contact.subtitle">Vamos conversar</h3>
+                        <p data-i18n="contact.description">Sinta-se à vontade para me mandar uma mensagem ou conectar-se através das minhas redes sociais.</p>
 
                         <div class="contact-links">
                             <a href="mailto:diegogon699@gmail.com" class="btn-primary">
@@ -208,10 +199,10 @@
 
                     <div class="contact-form-container">
                         <form class="contact-form" action="#" method="POST">
-                            <input type="text" name="nome" placeholder="Seu Nome" required>
-                            <input type="email" name="email" placeholder="Seu E-mail" required>
-                            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
-                            <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                            <input type="text" name="nome" placeholder="Seu Nome" data-i18n-placeholder="contact.form_name" required>
+                            <input type="email" name="email" placeholder="Seu E-mail" data-i18n-placeholder="contact.form_email" required>
+                            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" data-i18n-placeholder="contact.form_message" required></textarea>
+                            <button type="submit" class="btn-primary" data-i18n="contact.form_btn">Enviar Mensagem</button>
                         </form>
                     </div>
                 </div>
@@ -220,7 +211,7 @@
     </main>
 
     <footer>
-        <p>© 2026 Diego Matheus - Engenharia de Software</p>
+        <p data-i18n="footer.text">© 2026 Diego Matheus - Engenharia de Software</p>
     </footer>
 </body>
 

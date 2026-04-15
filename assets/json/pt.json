@@ -132,5 +132,8 @@
     "form_email": "Seu E-mail",
     "form_message": "Sua Mensagem",
     "form_btn": "Enviar Mensagem"
+  },
+  "footer": {
+    "text": "© 2026 Diego Matheus - Engenharia de Software"
   }
 }
