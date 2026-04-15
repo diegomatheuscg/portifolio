@@ -122,19 +122,20 @@ nav .nav-links a:hover {
     align-items: center;
     gap: 8px;
     padding: 12px 28px;
+    background-color: var(--card-bg);
     color: var(--text-primary);
     text-decoration: none;
-    box-shadow: 0 0 1px var(--span-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 4px;
     font-weight: 600;
     transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--text-primary);
-    color: var(--bg-color);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 20px rgba(57, 255, 20, 0.2);
+    background-color: var(--card-bg);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 8px -5px var(--accent);
 }
 
 .hero-section {
@@ -513,27 +514,101 @@ nav .nav-links a:hover {
     line-height: 1.6;
 }
 
-.contact-card {
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px 0;
 }
 
-.contact-card p {
+.contact-info h3 {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
     color: var(--text-secondary);
-    line-height: 1.7;
-    font-size: 16px;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .contact-links {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.contact-links a {
+    display: inline-flex;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+    transform: translateY(-2px) scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgba(57, 255, 20, 0.4));
+}
+
+.contact-links a img, .contact-links a svg, .contact-links a i {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.15);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: max-content;
+    align-self: flex-start;
+    padding: 12px 28px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.contact-form button:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 20px -5px var(--accent);
+    border-color: var(--accent);
 }
 
 #repo-count {
@@ -552,4 +627,14 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--text-secondary);
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 15px; height: auto; padding: 20px; }
+    .hero-container { flex-direction: column; gap: 40px; text-align: center; }
+    .hero-actions { justify-content: center; }
+    .hero-pillars { text-align: left; display: inline-flex; margin-left: 0;}
+    .about-card { padding: 25px 20px; }
+    .contact-wrapper { grid-template-columns: 1fr; padding: 20px 0; }
+    .project-card { flex: 0 0 85vw; }
 }
