@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education"
+  },
+  "hero": {
+    "greeting": "Hi, my name is Diego Matheus",
+    "title": "Software Engineer",
+    "subtitle": "Software Engineering student and Full Stack Developer with a solid foundation in solving problems within production environments. I focus on structured back-end development with Java (OOP, Design Patterns) and C/C++, combined with creating web and mobile interfaces using JavaScript, React, and Flutter. Extensive experience in SQL database administration, API integrations, log analysis, and technical troubleshooting.",
+    "cta_contact": "Get in touch",
+    "cta_github": "Access GitHub"
+  },
+  "sections": {
+    "projects_title": "Selected Projects",
+    "skills_title": "Technical Skills",
+    "experience_title": "Professional Experience",
+    "education_title": "Education",
+    "contact_title": "Contact"
+  },
+  "projects": [
+    {
+      "id": "sicape",
+      "title": "SICAPE - Alternative Penalties Management",
+      "description": "Solution designed for courts to mitigate fraud in signature and attendance control.",
+      "imgUrl": "./assets/img/sicape-preview.png",
+      "techStack": ["JavaScript", "Alpine.js", "Scrum", "Java"],
+      "repoUrl": "https://github.com/CS-PI-2026-Integrados/front-end",
+      "btnText": "View Repository"
+    },
+    {
+      "id": "cache-sim",
+      "title": "Cache Memory Simulator",
+      "description": "Project focused on computer architecture and low-level programming for memory mapping simulation.",
+      "imgUrl": "./assets/img/simulador-cache-preview.png",
+      "techStack": ["C++", "HW Architecture"],
+      "repoUrl": "#",
+      "btnText": "See more"
+    },
+    {
+      "id": "jogo-da-memoria",
+      "title": "Memory Game",
+      "description": "Implementation of a memory game with client-side logic and DOM manipulation.",
+      "imgUrl": "./assets/img/jogo-memoria-preview.png",
+      "techStack": ["JavaScript", "CSS", "HTML"],
+      "repoUrl": "https://github.com/diegomatheuscg/jogo-da-memoria",
+      "btnText": "View repository"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Software Engineering & Web",
+      "items": [
+        "Back-end: Java (OOP, Design Patterns, Data Structures), C/C++ and Python basics.",
+        "Front-end & Mobile: JavaScript, React, Dart, and Flutter framework."
+      ]
+    },
+    {
+      "category": "Operations Support & QA",
+      "items": [
+        "Technical Analysis: Investigation of integration failures, production log reading, and webservices.",
+        "Testing & Quality: API route testing (Postman/JSON), bug reproduction, and structured documentation."
+      ]
+    },
+    {
+      "category": "Database & Infrastructure",
+      "items": [
+        "Database: SQL queries and data cross-referencing (PostgreSQL and MySQL) for incident resolution.",
+        "Infrastructure: Linux and Windows environments, local network configuration, and hardware pairing."
+      ]
+    },
+    {
+      "category": "Tools & Processes",
+      "items": [
+        "Systems & Versioning: Git, Jira, Zendesk, and Botmaker.",
+        "Processes: Ticket triaging, internal documentation, guide creation, and support-to-development interface."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Unimake Software",
+      "role": "Technical Support Analyst (Intern)",
+      "date": "Jun 2025 - Present",
+      "description": "Reactive support for system usage. Diagnosis and correction of operational issues such as SEFAZ tax invoice rejections."
+    },
+    {
+      "company": "Unifatecie",
+      "role": "Parameterization Analyst",
+      "date": "Apr 2024 - Jun 2025",
+      "description": "Moodle platform administration and Level 2 support. Application log analysis for data failure correction."
+    },
+    {
+      "company": "aiqfome",
+      "role": "JR Support Analyst",
+      "date": "Feb 2023 - Apr 2023",
+      "description": "Interface between Support, DevOps, and Product. Integration testing with Postman (REST APIs) and MySQL queries."
+    },
+    {
+      "company": "aiqfome",
+      "role": "N2 Technical Support",
+      "date": "Jun 2021 - Jan 2023",
+      "description": "Resolution of integration issues between the app and POS systems. Network and database failure diagnosis."
+    },
+    {
+      "company": "GrandChef",
+      "role": "N1 Technical Support",
+      "date": "Dec 2020 - May 2021",
+      "description": "System maintenance via remote access. Network configuration and WhatsApp bot flow assistance."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Federal Institute of Paraná (IFPR)",
+      "degree": "Bachelor's in Software Engineering",
+      "date": "2024 - 2027",
+      "description": ""
+    },
+    {
+      "institution": "Federal Institute of Paraná (IFPR)",
+      "degree": "IT Technician",
+      "date": "2015 - 2018",
+      "description": "High school integrated with Information Technology Technical Course"
+    }
+  ],
+  "contact": {
+    "subtitle": "Let's talk",
+    "description": "Feel free to send me a message or connect through my social networks.",
+    "form_name": "Your Name",
+    "form_email": "Your Email",
+    "form_message": "Your Message",
+    "form_btn": "Send Message"
+  }
+}

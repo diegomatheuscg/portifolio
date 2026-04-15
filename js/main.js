@@ -1,11 +1,12 @@
+
 const projectGrid = document.querySelector(".projects-grid");
 const experienceList = document.querySelector("#experience .timeline");
 const repoSpan = document.getElementById("repo-count");
+const languageSelector = document.getElementById("language-selector");
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const { projects, experiences, repoCount } = await initData();
-
+    const data = await initData();
     if (projects) {
         projectGrid.innerHTML = "";
         projects.forEach(p => createProject(p));
@@ -23,14 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
 
-async function initData() {
-    const [projects, experiences, repoCount] = await Promise.all([
-        fetchProjects(),
-        fetchExperiences(),
-        fetchRepoCount(),
-    ]);
-    return { projects, experiences,repoCount };
-}
+
 
 async function fetchRepoCount() {
     try {
@@ -46,26 +40,16 @@ async function fetchRepoCount() {
     }
 }
 
-async function fetchProjects() {
-    try {
-        const response = await fetch("./assets/json/projects.json");
-        if (!response.ok) throw new Error(`Erro de requisição dos projetos. Status: ${response.status}`);
+async function initData(){
+    try{
+        const response = await fetch("../assets/json/en.json");
+        if(!response.ok){
+            return null;
+        }
         const data = await response.json();
         return data;
-    } catch (e) {
-        console.error("Failed to fetch projects:", e);
-        return null;
-    }
-}
-
-async function fetchExperiences() {
-    try {
-        const response = await fetch("./assets/json/experience.json");
-        if (!response.ok) throw new Error(`Erro de requisição de experiências. Status: ${response.status}`);
-        const data = await response.json();
-        return data;
-    } catch (e) {
-        console.error("Failed to fetch experiences:", e);
+    }catch(e){
+        console.error("Failed to fetch data: ", e);
         return null;
     }
 }
