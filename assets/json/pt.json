@@ -1,4 +1,5 @@
 {
+  "flag": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 14'%3E%3Crect width='20' height='14' fill='%2300903f'/%3E%3Cpolygon points='10,1 18,7 10,13 2,7' fill='%23ffdf00'/%3E%3Ccircle cx='10' cy='7' r='3' fill='%230089cf'/%3E%3C/svg%3E\"), url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23ffffff' stroke-width='1.5'/%3E%3C/svg%3E\")",
   "nav": {
     "about": "Sobre",
     "projects": "Projetos",
@@ -11,7 +12,8 @@
     "title": "Engenheiro de Software",
     "subtitle": "Graduando em Engenharia de Software e Desenvolvedor Full Stack, com base sólida na resolução de problemas em ambientes de produção. Atuo no desenvolvimento estruturado de back-end com Java (POO, Design Patterns) e C/C++, aliado à criação de interfaces web e mobile utilizando JavaScript, React e Flutter. Possuo ampla experiência em administração de bancos de dados SQL, integrações via API, análise de logs e investigação técnica de falhas.",
     "cta_contact": "Entrar em contato",
-    "cta_github": "Acessar GitHub"
+    "cta_github": "Acessar GitHub",
+    "repo_count": "repositórios públicos"
   },
   "sections": {
     "projects_title": "Projetos Selecionados",
@@ -44,8 +46,8 @@
         "C++",
         "Arquitetura HW"
       ],
-      "repoUrl": "#",
-      "btnText": "Ver mais"
+      "repoUrl": "https://github.com/diegomatheuscg/simulador-cache/",
+      "btnText": "Ver repositório"
     },
     {
       "id": "jogo-da-memoria",

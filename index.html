@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Matheus - Portfólio</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
@@ -15,7 +16,13 @@
     <header>
         <nav>
             <div class="logo">Diego Matheus<span>.</span></div>
-            <div class="nav-links">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
                 <a href="#about" data-i18n="nav.about">Sobre</a>
                 <a href="#projects" data-i18n="nav.projects">Projetos</a>
                 <a href="#skills" data-i18n="nav.skills">Habilidades</a>

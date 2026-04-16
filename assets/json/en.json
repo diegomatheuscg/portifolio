@@ -1,4 +1,5 @@
 {
+  "flag": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 14'%3E%3Crect width='20' height='14' fill='%23b22234'/%3E%3Crect y='2' width='20' height='2' fill='%23fff'/%3E%3Crect y='6' width='20' height='2' fill='%23fff'/%3E%3Crect y='10' width='20' height='2' fill='%23fff'/%3E%3Crect width='8' height='6' fill='%23005bbf'/%3E%3C/svg%3E\"), url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23ffffff' stroke-width='1.5'/%3E%3C/svg%3E\")",
   "nav": {
     "about": "About",
     "projects": "Projects",
@@ -11,7 +12,8 @@
     "title": "Software Engineer",
     "subtitle": "Software Engineering student and Full Stack Developer with a solid foundation in solving problems within production environments. I focus on structured back-end development with Java (OOP, Design Patterns) and C/C++, combined with creating web and mobile interfaces using JavaScript, React, and Flutter. Extensive experience in SQL database administration, API integrations, log analysis, and technical troubleshooting.",
     "cta_contact": "Get in touch",
-    "cta_github": "Access GitHub"
+    "cta_github": "Access GitHub",
+    "repo_count": "public repositories"
   },
   "sections": {
     "projects_title": "Selected Projects",

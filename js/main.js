@@ -5,15 +5,34 @@ const educationList = document.querySelector("#education .timeline");
 const skillsWrapper = document.querySelector(".skills-wrapper");
 const repoSpan = document.getElementById("repo-count");
 const languageSelector = document.getElementById("language-selector");
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
-function updateLanguageSelectorFlag() {
+hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+    });
+});
+
+function updateLanguageSelectorFlag(flagUrl) {
     languageSelector.dataset.lang = languageSelector.value;
+    if (flagUrl) {
+        languageSelector.style.backgroundImage = flagUrl;
+    }
 }
 
 async function updatePage() {
-    updateLanguageSelectorFlag();
     const data = await initData();
     if (data) {
+        updateLanguageSelectorFlag(data.flag);
         translatePage(data);
         loadContent(data);
     }
@@ -22,11 +41,12 @@ async function updatePage() {
 languageSelector.addEventListener("change", updatePage);
 
 document.addEventListener("DOMContentLoaded", async () => {
+    const data = await initData();
     await updatePage();
 
     const repoCount = await fetchRepoCount();
     if (repoCount !== null) {
-        repoSpan.textContent = repoCount;
+        repoSpan.textContent = `${repoCount} ${data.hero.repo_count}`;
     } else {
         repoSpan.style.display = "none";
     }
