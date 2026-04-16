@@ -297,6 +297,7 @@ nav .nav-links a:hover {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     align-items: stretch;
+    justify-content: center;
 }
 
 .projects-grid::-webkit-scrollbar {

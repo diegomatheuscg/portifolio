@@ -1,5 +1,4 @@
-
-
+import { createProject, createSkill, createEducation, createExperience } from "./utils.js";
 const projectGrid = document.querySelector(".projects-grid");
 const experienceList = document.querySelector("#experience .timeline");
 const educationList = document.querySelector("#education .timeline");
@@ -18,7 +17,7 @@ async function updatePage() {
 languageSelector.addEventListener("change", updatePage);
 
 document.addEventListener("DOMContentLoaded", async () => {
-    updatePage();
+    await updatePage();
 
     const repoCount = await fetchRepoCount();
     if (repoCount !== null) {
@@ -34,10 +33,10 @@ function loadContent(data) {
     educationList.innerHTML = "";
     skillsWrapper.innerHTML = "";
 
-    (data.projects || []).forEach(createProject);
-    (data.skills || []).forEach(createSkill);
-    (data.experience || []).forEach(createExperience);
-    (data.education || []).forEach(createEducation);
+    (data.projects || []).forEach((project) => createProject(project, projectGrid));
+    (data.skills || []).forEach((skill) => createSkill(skill, skillsWrapper));
+    (data.experience || []).forEach((experience) => createExperience(experience, experienceList));
+    (data.education || []).forEach((education) => createEducation(education, educationList));
 }
 
 async function fetchRepoCount() {
@@ -86,63 +85,3 @@ function translatePage(data) {
     });
 }
 
-function createProject(p) {
-    const projectCard = document.createElement("article");
-    projectCard.className = "project-card";
-
-    const techStackSpans = (p.techStack || []).map((tech) => `<span>${tech}</span>`).join("");
-
-    projectCard.innerHTML = `
-        <div class="project-image-wrapper">
-            <img class="project-image" src="${p.imgUrl}" alt="${p.title}">
-        </div>
-        <div class="project-content">
-            <h3>${p.title}</h3>
-            <p>${p.description}</p>
-        </div>
-        <div class="project-footer">
-            <div class="tech-stack">${techStackSpans}</div>
-            <div class="btn-wrapper">
-                <a href="${p.repoUrl || '#'}" class="btn-sm" target="_blank">${p.btnText || 'Ver mais'}</a>
-            </div>
-        </div>`;
-    projectGrid.appendChild(projectCard);
-}
-
-function createExperience(e) {
-    const timelineItem = document.createElement("div");
-    timelineItem.className = "timeline-item";
-    timelineItem.innerHTML = `
-        <div class="timeline-date">${e.date}</div>
-        <div class="timeline-content">
-            <h3>${e.role}</h3>
-            <h4>${e.company}</h4>
-            <p>${e.description}</p>
-        </div>`;
-    experienceList.appendChild(timelineItem);
-}
-
-function createEducation(ed) {
-    const timelineItem = document.createElement("div");
-    timelineItem.className = "timeline-item";
-    timelineItem.innerHTML = `
-        <div class="timeline-date">${ed.date}</div>
-        <div class="timeline-content">
-            <h3>${ed.degree}</h3>
-            <h4>${ed.institution}</h4>
-            <p>${ed.description}</p>
-        </div>`;
-    educationList.appendChild(timelineItem);
-}
-
-function createSkill(skill) {
-    const skillBlock = document.createElement("div");
-    skillBlock.className = "skill-category";
-
-    const itemsList = (skill.items || []).map((item) => `<li>${item}</li>`).join("");
-
-    skillBlock.innerHTML = `
-        <h3>${skill.category}</h3>
-        <ul>${itemsList}</ul>`;
-    skillsWrapper.appendChild(skillBlock);
-}
