@@ -26,7 +26,12 @@
       "title": "SICAPE - Alternative Penalties Management",
       "description": "Solution designed for courts to mitigate fraud in signature and attendance control.",
       "imgUrl": "./assets/img/sicape-preview.png",
-      "techStack": ["JavaScript", "Alpine.js", "Scrum", "Java"],
+      "techStack": [
+        "JavaScript",
+        "Alpine.js",
+        "Scrum",
+        "Java"
+      ],
       "repoUrl": "https://github.com/CS-PI-2026-Integrados/front-end",
       "btnText": "View Repository"
     },
@@ -35,7 +40,10 @@
       "title": "Cache Memory Simulator",
       "description": "Project focused on computer architecture and low-level programming for memory mapping simulation.",
       "imgUrl": "./assets/img/simulador-cache-preview.png",
-      "techStack": ["C++", "HW Architecture"],
+      "techStack": [
+        "C++",
+        "HW Architecture"
+      ],
       "repoUrl": "#",
       "btnText": "See more"
     },
@@ -44,8 +52,24 @@
       "title": "Memory Game",
       "description": "Implementation of a memory game with client-side logic and DOM manipulation.",
       "imgUrl": "./assets/img/jogo-memoria-preview.png",
-      "techStack": ["JavaScript", "CSS", "HTML"],
+      "techStack": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
       "repoUrl": "https://github.com/diegomatheuscg/jogo-da-memoria",
+      "btnText": "View repository"
+    },
+    {
+      "id": "vehicle-rental-flutter",
+      "title": "Vehicle Rental System",
+      "description": "Mobile application for car rental management, featuring control over categories, renters, and lease agreements.",
+      "imgUrl": "./assets/img/vehicle-rental-preview.png",
+      "techStack": [
+        "Flutter",
+        "Dart"
+      ],
+      "repoUrl": "https://github.com/diegomatheuscg/app01",
       "btnText": "View repository"
     }
   ],
@@ -84,31 +108,36 @@
       "company": "Unimake Software",
       "role": "Technical Support Analyst (Intern)",
       "date": "Jun 2025 - Present",
-      "description": "Reactive support for system usage. Diagnosis and correction of operational issues such as SEFAZ tax invoice rejections."
+      "description": "Reactive support for system usage. Diagnosis and correction of operational issues such as SEFAZ tax invoice rejections.",
+      "imgUrl": "./assets/img/unimake.png"
     },
     {
       "company": "Unifatecie",
       "role": "Parameterization Analyst",
       "date": "Apr 2024 - Jun 2025",
-      "description": "Moodle platform administration and Level 2 support. Application log analysis for data failure correction."
+      "description": "Moodle platform administration and Level 2 support. Application log analysis for data failure correction.",
+      "imgUrl": "./assets/img/fatecie.png"
     },
     {
       "company": "aiqfome",
       "role": "JR Support Analyst",
       "date": "Feb 2023 - Apr 2023",
-      "description": "Interface between Support, DevOps, and Product. Integration testing with Postman (REST APIs) and MySQL queries."
+      "description": "Interface between Support, DevOps, and Product. Integration testing with Postman (REST APIs) and MySQL queries.",
+      "imgUrl": "./assets/img/aiqfome.png"
     },
     {
       "company": "aiqfome",
       "role": "N2 Technical Support",
       "date": "Jun 2021 - Jan 2023",
-      "description": "Resolution of integration issues between the app and POS systems. Network and database failure diagnosis."
+      "description": "Resolution of integration issues between the app and POS systems. Network and database failure diagnosis.",
+      "imgUrl": "./assets/img/aiqfome.png"
     },
     {
       "company": "GrandChef",
       "role": "N1 Technical Support",
       "date": "Dec 2020 - May 2021",
-      "description": "System maintenance via remote access. Network configuration and WhatsApp bot flow assistance."
+      "description": "System maintenance via remote access. Network configuration and WhatsApp bot flow assistance.",
+      "imgUrl": "./assets/img/grandchef.png"
     }
   ],
   "education": [
@@ -116,13 +145,15 @@
       "institution": "Federal Institute of Paraná (IFPR)",
       "degree": "Bachelor's in Software Engineering",
       "date": "2024 - 2027",
-      "description": ""
+      "description": "",
+      "imgUrl": "./assets/img/ifpr.png"
     },
     {
       "institution": "Federal Institute of Paraná (IFPR)",
       "degree": "IT Technician",
       "date": "2015 - 2018",
-      "description": "High school integrated with Information Technology Technical Course"
+      "description": "High school integrated with Information Technology Technical Course",
+      "imgUrl": "./assets/img/ifpr.png"
     }
   ],
   "contact": {

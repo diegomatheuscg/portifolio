@@ -26,7 +26,12 @@
       "title": "SICAPE - Gestão de Penas Alternativas",
       "description": "Solução projetada para comarcas e fóruns visando mitigar fraudes no controle de assinaturas e presença.",
       "imgUrl": "./assets/img/sicape-preview.png",
-      "techStack": ["JavaScript", "Alpine.js", "Scrum", "Java"],
+      "techStack": [
+        "JavaScript",
+        "Alpine.js",
+        "Scrum",
+        "Java"
+      ],
       "repoUrl": "https://github.com/CS-PI-2026-Integrados/front-end",
       "btnText": "Ver Repositório"
     },
@@ -35,7 +40,10 @@
       "title": "Simulador de Memória Cache",
       "description": "Projeto focado em arquitetura de computadores e programação de baixo nível para simulação de mapeamento de memória.",
       "imgUrl": "./assets/img/simulador-cache-preview.png",
-      "techStack": ["C++", "Arquitetura HW"],
+      "techStack": [
+        "C++",
+        "Arquitetura HW"
+      ],
       "repoUrl": "#",
       "btnText": "Ver mais"
     },
@@ -44,8 +52,24 @@
       "title": "Jogo da Memória",
       "description": "Implementação do jogo da memória com lógica client-side e manipulação de DOM.",
       "imgUrl": "./assets/img/jogo-memoria-preview.png",
-      "techStack": ["JavaScript", "CSS", "HTML"],
+      "techStack": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
       "repoUrl": "https://github.com/diegomatheuscg/jogo-da-memoria",
+      "btnText": "Ver repositório"
+    },
+    {
+      "id": "aluguel-veiculos-flutter",
+      "title": "Sistema de Aluguel de Veículos",
+      "description": "Aplicativo mobile para gestão de locação de automóveis, com controle de categorias, locatários e contratos de locação.",
+      "imgUrl": "./assets/img/aluguel-veiculos-preview.png",
+      "techStack": [
+        "Flutter",
+        "Dart"
+      ],
+      "repoUrl": "https://github.com/diegomatheuscg/app01",
       "btnText": "Ver repositório"
     }
   ],
@@ -53,29 +77,29 @@
     {
       "category": "Engenharia de Software & Web",
       "items": [
-        "Back-end: Java (POO, Design Patterns, Estruturas de Dados), C/C++ e noções de Python.",
-        "Front-end e Mobile: JavaScript, React, Dart e framework Flutter."
+        "<strong>Back-end</strong>: Java (POO, Design Patterns, Estruturas de Dados), C/C++ e noções de Python.",
+        "<strong>Front-end e Mobile</strong>: JavaScript, React, Dart e framework Flutter."
       ]
     },
     {
       "category": "Sustentação Operacional & QA",
       "items": [
-        "Análise técnica: Investigação de falhas em integrações, leitura de logs de produção e webservices.",
-        "Testes e Qualidade: Execução de testes de rotas de API (Postman/JSON), reprodução e documentação estruturada de bugs."
+        "<strong>Análise técnica</strong>: Investigação de falhas em integrações, leitura de logs de produção e webservices.",
+        "<strong>Testes e Qualidade</strong>: Execução de testes de rotas de API (Postman/JSON), reprodução e documentação estruturada de bugs."
       ]
     },
     {
       "category": "Banco de Dados & Infraestrutura",
       "items": [
-        "Banco de Dados: Consultas e cruzamento de dados em SQL (PostgreSQL e MySQL) aplicados à resolução de incidentes.",
-        "Infraestrutura: Ambientes Linux, Windows, configuração de rede local e pareamento de hardwares parceiros."
+        "<strong>Banco de Dados</strong>: Consultas e cruzamento de dados em SQL (PostgreSQL e MySQL) aplicados à resolução de incidentes.",
+        "<strong>Infraestrutura</strong>: Ambientes Linux, Windows, configuração de rede local e pareamento de hardwares parceiros."
       ]
     },
     {
       "category": "Ferramentas & Processos",
       "items": [
-        "Sistemas e Versionamento: Git, Jira, Zendesk e Botmaker.",
-        "Processos: Triagem de chamados, documentação interna, criação de guias e interface entre suporte e desenvolvimento."
+        "<strong>Sistemas e Versionamento</strong>: Git, Jira, Zendesk e Botmaker.",
+        "<strong>Processos</strong>: Triagem de chamados, documentação interna, criação de guias e interface entre suporte e desenvolvimento."
       ]
     }
   ],
@@ -84,31 +108,36 @@
       "company": "Unimake Software",
       "role": "Analista de Suporte Técnico (Estágio)",
       "date": "Jun 2025 - Atual",
-      "description": "Suporte reativo na utilização do sistema. Diagnóstico e correção de problemas operacionais como rejeições da SEFAZ na emissão de notas fiscais."
+      "description": "Suporte reativo na utilização do sistema. Diagnóstico e correção de problemas operacionais como rejeições da SEFAZ na emissão de notas fiscais.",
+      "imgUrl": "./assets/img/unimake.png"
     },
     {
       "company": "Unifatecie",
       "role": "Analista de Parametrização",
       "date": "Abr 2024 - Jun 2025",
-      "description": "Administração da plataforma Moodle e suporte nível 2. Análise de logs da aplicação para correção de falhas de dados."
+      "description": "Administração da plataforma Moodle e suporte nível 2. Análise de logs da aplicação para correção de falhas de dados.",
+      "imgUrl": "./assets/img/fatecie.png"
     },
     {
       "company": "aiqfome",
       "role": "Analista de Suporte JR",
       "date": "Fev 2023 - Abr 2023",
-      "description": "Interface entre Suporte, DevOps e Produto. Homologação de integrações com Postman (APIs REST) e consultas MySQL."
+      "description": "Interface entre Suporte, DevOps e Produto. Homologação de integrações com Postman (APIs REST) e consultas MySQL.",
+      "imgUrl": "./assets/img/aiqfome.png"
     },
     {
       "company": "aiqfome",
       "role": "Suporte Técnico N2",
       "date": "Jun 2021 - Jan 2023",
-      "description": "Resolução de problemas de integração entre aplicativo e sistemas de caixa (PDVs). Diagnóstico de falhas de rede e banco de dados."
+      "description": "Resolução de problemas de integração entre aplicativo e sistemas de caixa (PDVs). Diagnóstico de falhas de rede e banco de dados.",
+      "imgUrl": "./assets/img/aiqfome.png"
     },
     {
       "company": "GrandChef",
       "role": "Suporte Técnico N1",
       "date": "Dez 2020 - Mai 2021",
-      "description": "Manutenção do sistema via acesso remoto. Configuração de rede e auxílio no fluxo de atendimento de bot no WhatsApp."
+      "description": "Manutenção do sistema via acesso remoto. Configuração de rede e auxílio no fluxo de atendimento de bot no WhatsApp.",
+      "imgUrl": "./assets/img/grandchef.png"
     }
   ],
   "education": [
@@ -116,13 +145,15 @@
       "institution": "Instituto Federal do Paraná (IFPR)",
       "degree": "Bacharelado em Engenharia de Software",
       "date": "2024 - 2027",
-      "description": ""
+      "description": "",
+      "imgUrl": "./assets/img/ifpr.png"
     },
     {
       "institution": "Instituto Federal do Paraná (IFPR)",
       "degree": "Técnico em Informática",
       "date": "2015 - 2018",
-      "description": "Ensino médio integrado ao Curso de Técnico em Informática"
+      "description": "Ensino médio integrado ao Curso de Técnico em Informática",
+      "imgUrl": "./assets/img/ifpr.png"
     }
   ],
   "contact": {

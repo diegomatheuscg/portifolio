@@ -6,7 +6,12 @@ const skillsWrapper = document.querySelector(".skills-wrapper");
 const repoSpan = document.getElementById("repo-count");
 const languageSelector = document.getElementById("language-selector");
 
+function updateLanguageSelectorFlag() {
+    languageSelector.dataset.lang = languageSelector.value;
+}
+
 async function updatePage() {
+    updateLanguageSelectorFlag();
     const data = await initData();
     if (data) {
         translatePage(data);

@@ -27,9 +27,12 @@ export function createExperience(experience, container) {
     timelineItem.innerHTML = `
         <div class="timeline-date">${experience.date}</div>
         <div class="timeline-content">
-            <h3>${experience.role}</h3>
-            <h4>${experience.company}</h4>
-            <p>${experience.description}</p>
+            <div class="timeline-body">
+                <h3>${experience.role}</h3>
+                <h4>${experience.company}</h4>
+                <p>${experience.description}</p>
+            </div>
+            ${experience.imgUrl ? `<div class="timeline-image"><img src="${experience.imgUrl}" alt="${experience.company} logo"></div>` : ""}
         </div>`;
     container.appendChild(timelineItem);
 }
@@ -40,9 +43,12 @@ export function createEducation(ed, e) {
     timelineItem.innerHTML = `
         <div class="timeline-date">${ed.date}</div>
         <div class="timeline-content">
-            <h3>${ed.degree}</h3>
-            <h4>${ed.institution}</h4>
-            <p>${ed.description}</p>
+            <div class="timeline-body">
+                <h3>${ed.degree}</h3>
+                <h4>${ed.institution}</h4>
+                <p>${ed.description}</p>
+            </div>
+            ${ed.imgUrl ? `<div class="timeline-image"><img src="${ed.imgUrl}" alt="${ed.institution} logo"></div>` : ""}
         </div>`;
     e.appendChild(timelineItem);
 }
@@ -51,10 +57,10 @@ export function createSkill(skill, e) {
     const skillBlock = document.createElement("div");
     skillBlock.className = "skill-category";
 
-    const itemsList = (skill.items || []).map((item) => `<li>${item}</li>`).join("");
+    const itemsList = (skill.items || []).map((item) => `<p>${item}</p>`).join("");
 
     skillBlock.innerHTML = `
         <h3>${skill.category}</h3>
-        <ul>${itemsList}</ul>`;
+        ${itemsList}`;
     e.appendChild(skillBlock);
 }
