@@ -65,41 +65,24 @@ async function initData() {
 }
 
 function translatePage(data) {
-    const textMap = {
-        "nav.about": data.nav.about,
-        "nav.projects": data.nav.projects,
-        "nav.skills": data.nav.skills,
-        "nav.experience": data.nav.experience,
-        "nav.education": data.nav.education,
-        "hero.greeting": data.hero.greeting,
-        "hero.title": data.hero.title,
-        "hero.subtitle": data.hero.subtitle,
-        "hero.cta_contact": data.hero.cta_contact,
-        "hero.cta_github": data.hero.cta_github,
-        "sections.projects_title": data.sections.projects_title,
-        "sections.skills_title": data.sections.skills_title,
-        "sections.experience_title": data.sections.experience_title,
-        "sections.education_title": data.sections.education_title,
-        "sections.contact_title": data.sections.contact_title,
-        "contact.subtitle": data.contact.subtitle,
-        "contact.description": data.contact.description,
-        "contact.form_btn": data.contact.form_btn,
-        "footer.text": data.footer.text,
-    };
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.dataset.i18n;
-        if (textMap[key]) element.textContent = textMap[key];
-    });
+    const textMap = document.querySelectorAll("[data-i18n], [data-i18n-placeholder]");
 
-    const placeholderMap = {
-        "contact.form_name": data.contact.form_name,
-        "contact.form_email": data.contact.form_email,
-        "contact.form_message": data.contact.form_message,
-    };
+    textMap.forEach((element) => {
+        if (element.dataset.i18n) {
+            const key = element.dataset.i18n;
+            const translation = key
+                .split('.')
+                .reduce((obj, part) => (obj ? obj[part] : null), data);
+            if (translation) element.textContent = translation;
+        }
 
-    document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
-        const key = element.dataset.i18nPlaceholder;
-        if (placeholderMap[key]) element.placeholder = placeholderMap[key];
+        if (element.dataset.i18nPlaceholder) {
+            const key = element.dataset.i18nPlaceholder;
+            const translation = key
+                .split('.')
+                .reduce((obj, part) => (obj ? obj[part] : null), data);
+            if (translation) element.placeholder = translation;
+        }
     });
 }
 
